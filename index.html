@@ -1,1 +1,35 @@
-
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+    <title>Подбор вклада</title>
+    <link rel='stylesheet' href='./style.css'>
+</head>
+<body>
+    <section>
+        <div class='container'>
+            <h1>Подбор оптимального вклада</h1>
+            <div class='input-container'>
+                <label for='initial-sum-input'>Начальная сумма</label><input  placeholder="Неотрицательное число" id='initial-sum-input'>
+            </div>
+            <div class='input-container'>
+                <label for='monthly'>Сумма ежемесячного пополнения</label><input placeholder="Неотрицательное число" id='monthly'>
+            </div>
+            <div class='input-container'>
+                <label for='time'>Срок вклада</label><input placeholder="Положительное целое число месяцев" id='time'>
+            </div>
+            <div class='input-container'>
+                <label for='currency'>Валюта вклада</label><input placeholder="RUB/USD" id='currency'>
+            </div>
+            <button id='button-choose'>Подобрать</button>            
+        </div>
+        <div id='result'>
+            <table class="resultTable" id="resultTable">
+                <tr class='head'>
+                    <th>Название банка</th><th>Вклад</th><th>Процент</th><th>Итоговая сумма</th></tr>
+            </table>
+        </div>
+    </section>
+    <!-- <script src="./data.js"></script> -->
+    <script src="./script.js "></script>  
+</body>
+</html>
