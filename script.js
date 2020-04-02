@@ -54,7 +54,7 @@ let deposits = [
     { bankName: "Новый Век", investName: "Сберегательный", currency: "USD", incomeType: 1.5, sumMin: 5000, sumMax: 20000, termMin: 12, termMax: 12, canDeposit: true }
     ];
 
-class Application {
+    class Application {
     constructor() {
         this.button = document.getElementById('button-choose');
         this.button.addEventListener('click', this.getData);
@@ -110,12 +110,15 @@ class Deposit {
         if (this.initial >= 0 && this.monthly >= 0 && Number.isInteger(+this.time) && this.time > 0 && (this.currency == 'RUB' || this.currency == 'USD')) {
             console.log('ok');
         }
+        else if (this.initial == "" || this.monthly == "" || this.time == "" || this.currency){
+            alert ('Введите данные');
+        }
         else if (this.currency != 'RUB' || this.currency != 'USD'){
             alert ('Некорректное значение валюты');
         }
+       
         else {
             alert('Ошибка во вводе данных!');
-            return;
         }
     }
 }
